@@ -34,17 +34,17 @@ const SignInScreen: React.FC = () => {
           sessionId: respSignIn.guest_session_id,
         }),
       );
-      // if (
-      //   userEmail.toLowerCase() === 'moviesinccliente@yopmail.com' &&
-      //   userPassword === '12345678'
-      // ) {
+      if (
+        userEmail.toLowerCase() === 'moviesinccliente@yopmail.com' &&
+        userPassword === '12345678'
+      ) {
         setTimeout(() => {
           navigation.navigate('HomeScreen' as never);
           setIsLoading(false);
         }, 2000);
-      // }
+      }
     } catch (error) {
-      // There was an error on the native side
+      console.log(error);
     }
   };
 
